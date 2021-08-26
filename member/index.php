@@ -1,5 +1,5 @@
 <?php
-require_once '../../templates/navbar.php';
+require_once '../templates/navbar.php';
 include '../db/connection.php';
 require_once './request/get-all.php';
 ?>
@@ -33,9 +33,9 @@ require_once './request/get-all.php';
                 <tr>
                     <th scope="row"><?= $book['id'] ?></th>
                     <td><?= $book['nama'] ?></td>
-                    <td><?= $book['jk'] ?></td>
+                    <td><?= $book['jk'] == 0 ? 'Perempuan' : 'Laki - Laki' ?></td>
                     <td><?= $book['alamat'] ?></td>
-                    <td><?= $book['status'] ?></td>
+                    <td><?= $book['status'] == 0 ? 'Nonaktif' : 'Aktif' ?></td>
                     <td><?= $book['foto'] ?></td>
                     <td>
                         <a href="<?='./request/edit.php?id='. $book['id'] ?>" class="btn btn-info">Edit</a>
@@ -49,5 +49,5 @@ require_once './request/get-all.php';
 </div>
 
 <?php
-require_once '../../templates/bottom.php';
+require_once '../templates/bottom.php';
 ?>

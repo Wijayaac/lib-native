@@ -4,8 +4,8 @@
                 <a href="#">Back to top</a>
             </p>
         </footer>
-        <script src="./jwd-dts/assets/js/popper.min.js"></script>
-        <script src="../jwd-dts/assets/js/bootstrap.min.js"></script>
+        <script src="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/js/popper.min.js"></script>
+        <script src="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

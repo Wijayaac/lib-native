@@ -1,6 +1,6 @@
 <?php
-require_once('../templates/navbar.php');
-include '../library/db/connection.php';
+require_once('./templates/navbar.php');
+include './db/connection.php';
 ?>
 <div style="max-width: 720px;" class="row mx-auto">
     <div class="col">
@@ -45,5 +45,5 @@ include '../library/db/connection.php';
 </div>
 
 <?php
-require_once('../templates/bottom.php');
+require_once('./templates/bottom.php');
 ?>

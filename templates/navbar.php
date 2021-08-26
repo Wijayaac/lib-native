@@ -7,11 +7,11 @@
     <title>Post Newer on This Site</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/css/bootstrap.min.css" rel="stylesheet">
     <meta name="theme-color" content="#7952b3">
     <!-- Custom styles for this template -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet"> -->
-    <link href="../../" rel="stylesheet">
+    <link href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
