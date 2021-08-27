@@ -1,3 +1,11 @@
+<?php
+session_start();
+// on login screen, redirect to dashboard if already logged in
+if (isset($_SESSION['sesi'])) {
+    header("location:http://" . $_SERVER['SERVER_NAME'] . "/lib-native/");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
