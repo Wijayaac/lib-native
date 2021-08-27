@@ -15,7 +15,7 @@ require_once './request/get-all.php';
                     </svg> Tambah Peminjaman
                 </a>
             </div>
-            <table class="table">
+            <table class="table table-striped table-bordered dt-responsive nowrap" id="loanTable">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -45,6 +45,11 @@ require_once './request/get-all.php';
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#loanTable').DataTable();
+    });
+</script>
 <?php
 require_once '../templates/bottom.php';
 ?>

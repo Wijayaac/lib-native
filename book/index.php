@@ -23,7 +23,7 @@ require_once './request/get-all.php';
     </div>
     <div class="row mx-auto mt-2 mt-md-4 py-2 py-md-4">
         <div class="col">
-            <table class="table">
+            <table class="table table-striped table-bordered dt-responsive nowrap" id='bookTable'>
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -44,8 +44,8 @@ require_once './request/get-all.php';
                             <td><?= $book['penulis'] ?></td>
                             <td><?= $book['penerbit'] ?></td>
                             <td>
-                                <a href="<?= './request/edit.php?id=' . $book['id'] ?>" class="btn btn-info">Edit</a>
-                                <a href="<?= './request/delete.php?id=' . $book['id'] ?>" class="btn btn-danger">Delete</a>
+                                <a href="<?= './request/edit.php?id=' . $book['id'] ?>" class="btn btn-info d-inline-block mx-1 my-1">Edit</a>
+                                <a href="<?= './request/delete.php?id=' . $book['id'] ?>" class="btn btn-danger d-inline-block mx-1 my-1">Delete</a>
                             </td>
                         </tr>
                     <?php  } ?>
@@ -54,6 +54,11 @@ require_once './request/get-all.php';
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#bookTable').DataTable();
+    });
+</script>
 <?php
 require_once '../templates/bottom.php';
 ?>

@@ -20,7 +20,7 @@ require_once('../../templates/navbar.php');
     <form action="../request/create.php" method="POST">
         <div class="mb-3">
             <label for="exampleDataList" class="form-label">Datalist Members</label>
-            <input class="form-control" name="idMember" list="dataListMembers" id="exampleDataList" placeholder="Type to search...">
+            <input class="form-control" required name="idMember" list="dataListMembers" id="exampleDataList" placeholder="Type to search...">
             <datalist id="dataListMembers">
                 <?php while ($member  = mysqli_fetch_array($members)) { ?>
                     <option value="<?= $member['id'] ?>"><?= $member['nama'] ?></option>
@@ -29,7 +29,7 @@ require_once('../../templates/navbar.php');
         </div>
         <div class="mb-3">
             <label for="exampleDataList" class="form-label">Datalist Books</label>
-            <input class="form-control" name="idBook" list="dataListBooks" id="exampleDataList" placeholder="Type to search...">
+            <input class="form-control" required name="idBook" list="dataListBooks" id="exampleDataList" placeholder="Type to search...">
             <datalist id="dataListBooks">
                 <?php while ($book  = mysqli_fetch_array($books)) {
                 ?>

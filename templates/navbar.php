@@ -11,15 +11,12 @@ if (isset($_SESSION['sesi'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dashboard Admin</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <script src="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/jquery/jquery.min.js"></script>
         <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/jqvmap/jqvmap.min.css">
         <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/css/adminlte.min.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/daterangepicker/daterangepicker.css">
-        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/summernote/summernote-bs4.min.css">
+
+        <link rel="stylesheet" href="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+        <script src="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/assets/plugins/chart.js/Chart.min.js"></script>
     </head>
 
     <body class="hold-transition sidebar-mini layout-fixed">

@@ -24,7 +24,7 @@ require_once './request/get-all.php';
     </div>
     <div class="row mx-auto mt-2 mt-md-4 py-2 py-md-4">
         <div class="col">
-            <table class="table">
+            <table class="table table-striped table-bordered dt-responsive nowrap" id="memberTable">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -47,10 +47,13 @@ require_once './request/get-all.php';
                             <td><?= $book['jk'] == 0 ? 'Perempuan' : 'Laki - Laki' ?></td>
                             <td><?= $book['alamat'] ?></td>
                             <td><?= $book['status'] == 0 ? 'Nonaktif' : 'Aktif' ?></td>
-                            <td><?= $book['foto'] ?></td>
                             <td>
-                                <a href="<?= './request/edit.php?id=' . $book['id'] ?>" class="btn btn-info">Edit</a>
-                                <a href="<?= './request/delete.php?id=' . $book['id'] ?>" class="btn btn-danger">Delete</a>
+                                <img class="img-thumbnail" width="100px" src="<?= "http://" . $_SERVER['SERVER_NAME'] ?>/lib-native/uploads/<?= $book['foto'] ?>" alt=" <?= $book['foto'] ?>" srcset="">
+                            </td>
+                            <td>
+                                <a href="<?= './request/edit.php?id=' . $book['id'] ?>" class="btn btn-info d-inline-block mx-1 my-1">Edit</a>
+                                <a href="<?= './request/delete.php?id=' . $book['id'] ?>" class="btn btn-danger d-inline-block mx-1 my-1">Delete</a>
+                                <a href="<?= './request/card.php?id=' . $book['id'] ?>" class="btn btn-success d-inline-block mx-1 my-1" target="_blank">Cetak KTA</a>
                             </td>
                         </tr>
                     <?php  } ?>
@@ -59,6 +62,11 @@ require_once './request/get-all.php';
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#memberTable').DataTable();
+    });
+</script>
 <?php
 require_once '../templates/bottom.php';
 ?>

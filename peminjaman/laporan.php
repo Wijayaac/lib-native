@@ -15,7 +15,7 @@ require_once './request/get-all.php';
                     </svg> Cetak Data
                 </a>
             </div>
-            <table class="table">
+            <table class="table table-striped table-bordered dt-responsive nowrap" id="reportTable">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -43,6 +43,11 @@ require_once './request/get-all.php';
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#reportTable').DataTable();
+    });
+</script>
 <?php
 require_once '../templates/bottom.php';
 ?>
