@@ -3,7 +3,7 @@ require_once('./templates/navbar.php');
 include './db/connection.php';
 // query for books graph
 $queryBookData = "SELECT count(id) as total FROM tbl_buku GROUP BY tahun ORDER BY id desc";
-$queryBookLabel = "SELECT tahun FROM tbl_buku GROUP BY tahun ORDER BY id desc";
+$queryBookLabel = "SELECT tahun FROM tbl_buku GROUP BY tahun ORDER BY tahun asc";
 
 // query for anggota graphs
 $queryAnggotaData = "SELECT COUNT(id) as total FROM tbl_anggota GROUP BY status ORDER BY status asc";
